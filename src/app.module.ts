@@ -19,7 +19,8 @@ import { ConfigModule } from '@nestjs/config/dist/config.module';
       password: process.env.SENHA_BD,
       database: 'livraria',
       autoLoadModels: true,
-      synchronize: true
+      synchronize: true,
+      timezone: process.env.TIME_ZONE
     }),
     SequelizeModule.forFeature([Livro])
   ],
